@@ -1,10 +1,8 @@
 package com.miramontes.springdiexamples.Controller;
 
-import com.miramontes.springdiexamples.services.GreetingServiceImplementation;
+import com.miramontes.springdiexamples.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectionControllerTest {
 
@@ -13,7 +11,7 @@ class SetterInjectionControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectionController();
-        controller.setGreetingService(new GreetingServiceImplementation());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
