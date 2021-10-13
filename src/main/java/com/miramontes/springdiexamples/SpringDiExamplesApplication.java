@@ -1,6 +1,7 @@
 package com.miramontes.springdiexamples;
 
 import com.miramontes.springdiexamples.Controller.MyController;
+import com.miramontes.springdiexamples.Controller.PropertyInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -14,6 +15,10 @@ public class SpringDiExamplesApplication {
 		MyController myController = (MyController) context.getBean("myController");
 
 		System.out.println(myController.sayHello());
+
+		System.out.println("-----Property");
+		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) context.getBean("propertyInjectedController");
+		System.out.println("propertyInjectedController.getGreeting() = " + propertyInjectedController.getGreeting());
 	}
 
 }
