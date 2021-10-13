@@ -1,9 +1,6 @@
 package com.miramontes.springdiexamples;
 
-import com.miramontes.springdiexamples.Controller.ConstructorInjectionController;
-import com.miramontes.springdiexamples.Controller.MyController;
-import com.miramontes.springdiexamples.Controller.PropertyInjectedController;
-import com.miramontes.springdiexamples.Controller.SetterInjectionController;
+import com.miramontes.springdiexamples.Controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -13,6 +10,8 @@ public class SpringDiExamplesApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(SpringDiExamplesApplication.class, args);
+
+		I18nController i18nController = (I18nController) context.getBean("i18nController");
 
 		MyController myController = (MyController) context.getBean("myController");
 
