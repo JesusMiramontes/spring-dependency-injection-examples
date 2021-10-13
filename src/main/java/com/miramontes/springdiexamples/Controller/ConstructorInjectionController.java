@@ -10,7 +10,7 @@ public class ConstructorInjectionController {
     private final GreetingService greetingService;
 
     // Autowired annotation is optional in constructor injection
-    public ConstructorInjectionController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
+    public ConstructorInjectionController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
